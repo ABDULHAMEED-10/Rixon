@@ -13,7 +13,10 @@ import FAQ from "./HomeComponents/FAQs/FAQ";
 const Home = () => {
   return (
     <div className="bg-black min-h-screen">
-      <MetaData title="Home" />
+      <MetaData 
+        title="Home" 
+        description="For over six years, Rixon has been delivering innovative digital solutions with creativity, precision, and excellence. We specialize in AI-driven applications, sophisticated e-commerce platforms, and custom web and mobile solutions."
+      />
       <HeroSection />
       <Brand />
       <Services />
