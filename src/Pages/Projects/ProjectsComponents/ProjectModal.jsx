@@ -17,7 +17,7 @@ const ProjectModal = ({ project, onClose }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white rounded-xl overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-gray-900 border border-green-600/30 rounded-xl overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative h-72 md:h-96">
@@ -28,9 +28,10 @@ const ProjectModal = ({ project, onClose }) => {
               />
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-700 hover:bg-gray-100 transition-colors duration-300"
+                className="absolute top-4 right-4 w-12 h-12 rounded-full bg-green-600/90 backdrop-blur-sm border-2 border-green-600 flex items-center justify-center text-white hover:bg-green-600 hover:border-green-500 hover:scale-110 transition-all duration-300 z-20 shadow-xl"
+                aria-label="Close modal"
               >
-                <X className="h-5 w-5" />
+                <X className="h-7 w-7 text-white stroke-[3]" />
               </button>
             </div>
             <div className="p-6 md:p-8">
@@ -38,29 +39,31 @@ const ProjectModal = ({ project, onClose }) => {
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                    className="px-2 py-1 bg-gray-800 border border-green-600/30 text-gray-300 text-xs rounded hover:border-green-600 hover:text-green-600 transition-colors duration-300"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-6">{project.description}</p>
+              <p className="text-gray-300 mb-6">{project.description}</p>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h4 className="text-lg font-semibold mb-2 text-gray-900">
+                  <h4 className="text-lg font-semibold mb-2 text-white">
                     Project Details
                   </h4>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-300">
                     <li>
                       <span className="font-medium">Client:</span>{" "}
                       {project.client}
                     </li>
-                    <li>
-                      <span className="font-medium">Date:</span> {project.date}
-                    </li>
+                    {project.date && (
+                      <li>
+                        <span className="font-medium">Date:</span> {project.date}
+                      </li>
+                    )}
                     <li>
                       <span className="font-medium">Category:</span>{" "}
                       {project.category.charAt(0).toUpperCase() +
@@ -69,10 +72,10 @@ const ProjectModal = ({ project, onClose }) => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2 text-gray-900">
+                  <h4 className="text-lg font-semibold mb-2 text-white">
                     Technologies Used
                   </h4>
-                  <ul className="space-y-2 text-gray-600">
+                  <ul className="space-y-2 text-gray-300">
                     {project.tags.map((tag, index) => (
                       <li key={index}>• {tag}</li>
                     ))}
@@ -80,24 +83,28 @@ const ProjectModal = ({ project, onClose }) => {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-full font-medium shadow-md hover:bg-green-700 transition-colors duration-300"
-                >
-                  View Live
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-full font-medium shadow-md hover:bg-gray-900 transition-colors duration-300"
-                >
-                  Source Code
-                  <Github className="ml-2 h-4 w-4" />
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-full font-medium shadow-md hover:bg-green-700 transition-colors duration-300"
+                  >
+                    View Live Demo
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                )}
+                {project.github && project.github !== "#" && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-full font-medium shadow-md hover:bg-gray-900 transition-colors duration-300"
+                  >
+                    Source Code
+                    <Github className="ml-2 h-4 w-4" />
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

@@ -14,11 +14,11 @@ const ProjectsSection = () => {
   useEffect(() => {
     if (filter === "all") {
       setProjects(allProjects);
-    } else if (filter === "featured") {
-      setProjects(allProjects.filter((project) => project.featured));
     } else {
       setProjects(allProjects.filter((project) => project.category === filter));
     }
+    // Reset visible projects when filter changes
+    setVisibleProjects(6);
   }, [filter]);
 
   const loadMore = () => {
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-20 my-10 overflow-hidden" id="projects">
+    <section className="py-20 my-10 overflow-hidden bg-black text-white" id="projects">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <motion.div
@@ -36,13 +36,13 @@ const ProjectsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+          <span className="inline-block py-1 px-3 rounded-full bg-green-600/20 text-green-600 border border-green-600/30 text-sm font-medium mb-4">
             Our Work
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
             Featured <span className="text-green-600">Projects</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-300">
             Explore our portfolio of successful projects delivered for clients
             across various industries.
           </p>
@@ -60,19 +60,14 @@ const ProjectsSection = () => {
 
         {/* Load more button */}
         {visibleProjects < projects.length && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-center mt-12"
-          >
+          <div className="text-center mt-12">
             <button
               onClick={loadMore}
-              className="px-6 py-3 bg-white border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-300 shadow-sm"
+              className="nav__button"
             >
               Load More Projects
             </button>
-          </motion.div>
+          </div>
         )}
 
         {/* Project detail modal */}

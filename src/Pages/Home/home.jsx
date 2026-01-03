@@ -12,7 +12,7 @@ import FAQ from "./HomeComponents/FAQs/FAQ";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="bg-black min-h-screen">
       <MetaData title="Home" />
       <HeroSection />
       <Brand />

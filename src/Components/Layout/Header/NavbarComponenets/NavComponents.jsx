@@ -7,14 +7,7 @@ const NavComponents = ({ toward, nam }) => {
   return (
     <NavLink
       to={`/${toward}`}
-      // style={({ isActive }) => {
-      //   return {
-      //     color: isActive ? "black" : "gray",
-      //     fontWeight: isActive ? "bold" : "normal",
-      //     fontSize: isActive ? "1.1rem" : "1rem",
-      //   };
-      // }}
-      className="navbar__link font-bold hover:text-green-600 transition duration-300"
+      className="navbar__link font-bold text-white hover:text-green-600 transition duration-300"
     >
       {nam}
     </NavLink>

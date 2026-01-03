@@ -1,6 +1,7 @@
 import React from "react";
 import "./../../HomeComponents/Home.css";
 import { Typewriter } from "react-simple-typewriter";
+import { Globe } from "lucide-react";
 
 const HeroSection = () => {
   const services = [
@@ -14,26 +15,26 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="hero__section__wrapper py-8 py-10 rounded-b-3xl lg:rounded-b-[100px] bg-gradient-to-b from-green-100 to-white relative overflow-hidden mt-20 md:mt-10 lg:mt-0">
+    <div className="hero__section__wrapper py-8 py-10 rounded-b-3xl lg:rounded-b-[100px] bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden mt-20 md:mt-10 lg:mt-0">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-10 -left-10 w-40 h-40 md:w-64 md:h-64 rounded-full bg-green-200 opacity-60 animate-pulse"></div>
-        <div className="absolute top-1/3 -right-20 w-40 h-40 md:w-80 md:h-80 rounded-full bg-green-200 opacity-40 animate-pulse delay-700"></div>
-        <div className="absolute bottom-20 left-1/4 w-20 h-20 md:w-32 md:h-32 rounded-full bg-green-200 opacity-50 animate-bounce-slow"></div>
+        <div className="absolute -top-10 -left-10 w-40 h-40 md:w-64 md:h-64 rounded-full bg-green-600/20 opacity-60 animate-pulse"></div>
+        <div className="absolute top-1/3 -right-20 w-40 h-40 md:w-80 md:h-80 rounded-full bg-green-600/15 opacity-40 animate-pulse delay-700"></div>
+        <div className="absolute bottom-20 left-1/4 w-20 h-20 md:w-32 md:h-32 rounded-full bg-green-600/20 opacity-50 animate-bounce-slow"></div>
       </div>
 
       <div className="relative isolate px-4 sm:px-6 lg:px-8 z-10">
         <div className="mx-auto max-w-5xl py-12 sm:py-20 md:py-24 lg:py-32">
           <div className="mb-8 sm:mb-10 md:mb-12 flex justify-center">
-            <div className="relative rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base font-medium text-green-800 bg-green-200 ring-2 ring-green-400 shadow-sm transform hover:scale-105 transition-transform duration-300">
-              <span className="hidden sm:inline">✨</span> Delivering The
-              Solution Over The Globe{" "}
-              <span className="hidden sm:inline">✨</span>
+            <div className="relative rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base font-medium text-green-600 bg-green-600/20 ring-1 ring-green-600 shadow-sm transform hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
+              <Globe className="hidden sm:inline h-4 w-4 sm:h-5 sm:w-5" />
+              Delivering The Solution Over The Globe
+              <Globe className="hidden sm:inline h-4 w-4 sm:h-5 sm:w-5" />
             </div>
           </div>
 
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">
               We Tackle Every Niche{" "}
               <div className="text__gradient w-full py-2 sm:py-3 min-h-[3rem] sm:min-h-[3.5rem] md:min-h-[4rem] lg:min-h-[4.5rem] flex items-center justify-center">
                 <Typewriter
@@ -49,19 +50,19 @@ const HeroSection = () => {
               </div>
             </h1>
 
-            <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              We are a Top Agency in UK with over 60+ Satisfied Clients across
-              the World.
+            <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+              We are a Top Agency serving clients globally with over 7+ Active Clients and 48+ Projects across
+              Europe, America, UK, Australia, and Worldwide.
             </p>
 
             <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row justify-center items-center ">
               <a
                 href="https://wa.me/+923000713825"
-                className="w-auto rounded-md bg-gray-900 mx-3 lg:mx-4 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-base font-semibold text-white shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                className="w-auto mx-3 lg:mx-4 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-base font-semibold rounded-full border border-green-600 bg-transparent text-green-600 hover:bg-green-600 hover:text-green-600 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-md group"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-5 w-5 text-green-600 group-hover:text-green-600 transition-colors duration-300"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -70,11 +71,11 @@ const HeroSection = () => {
                 Contact Now
               </a>
 
-              <span className="py-2 text-gray-400 sm:py-0">OR</span>
+              <span className="py-2 text-gray-500 sm:py-0">OR</span>
 
               <a
                 href="https://calendly.com/abdulhameed000650/30min"
-                className="w-auto rounded-md ring-1 ring-green-700 mx-3 lg:mx-4 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-base font-semibold text-green-700 hover:bg-green-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                className="nav__button w-auto mx-3 lg:mx-4 flex items-center justify-center gap-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,10 +96,10 @@ const HeroSection = () => {
               </a>
             </div>
 
-            <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 flex items-center justify-center gap-2">
+            <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-400 flex items-center justify-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-green-600"
+                className="h-3 w-3 sm:h-4 sm:w-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -127,7 +128,7 @@ const HeroSection = () => {
         >
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="fill-white"
+            className="fill-black"
           ></path>
         </svg>
       </div>

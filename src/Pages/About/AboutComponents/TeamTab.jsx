@@ -51,10 +51,10 @@ const TeamTab = () => {
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible">
       <motion.div variants={itemVariants} className="text-center mb-12">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
           Meet Our Team
         </h3>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-300 max-w-2xl mx-auto">
           Our talented team of experts is passionate about creating innovative
           digital solutions.
         </p>
@@ -68,7 +68,7 @@ const TeamTab = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="bg-gray-900 border border-green-600/30 rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:border-green-600 transition-all duration-300 hover:scale-105"
           >
             <div className="relative overflow-hidden group">
               <img
@@ -83,7 +83,7 @@ const TeamTab = () => {
               </div>
             </div>
             <div className="p-6">
-              <h4 className="text-xl font-bold mb-1 text-gray-900">
+              <h4 className="text-xl font-bold mb-1 text-white">
                 {member.name}
               </h4>
               <p className="text-green-600 font-medium mb-4">{member.role}</p>

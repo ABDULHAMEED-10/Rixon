@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ample+Display:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -6,27 +7,40 @@
   padding: 0;
   box-sizing: border-box;
 }
-button {
-  background-color: transparent;
-  color: var(--green-hover-color);
-  border: 1px solid var(--green-hover-color);
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  font-size: clamp(0.5rem, 0.4937rem + 2.0253vw, 1rem);
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  justify-content: center;
+/* Global button styles removed - using Tailwind classes instead */
+/* Individual buttons should use Tailwind classes for borders and styling */
+
+/* Ensure green borders are applied correctly - override browser defaults */
+.border,
+[class*="border"] {
+  border-color: currentColor;
 }
-button:hover {
-  background-color: var(--green-hover-color);
-  color: white;
+
+/* Specific rule for green-600 borders */
+.border-green-600,
+[class*="border-green-600"] {
+  border-color: rgb(22, 163, 74) !important; /* green-600: #16a34a */
 }
+
+/* Override any white/gray default borders */
+.border-gray-200,
+.border-gray-300,
+.border-gray-400,
+.border-white,
+[class*="border-gray"],
+[class*="border-white"] {
+  border-color: rgb(22, 163, 74) !important; /* Force green instead of white/gray */
+}
+
 body {
   font-family: var(--popins-font-fmaily);
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#root {
+  background-color: #000000;
+  min-height: 100vh;
 }
 p,
 span,

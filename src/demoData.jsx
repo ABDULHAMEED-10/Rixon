@@ -1,13 +1,5 @@
-import brand1 from "../src/assets/brand-1-1.png";
-import brand2 from "../src/assets/brand-1-2.png";
-import brand3 from "../src/assets/brand-1-3.png";
-import brand4 from "../src/assets/brand-1-4.png";
-import brand5 from "../src/assets/brand-1-5.png";
-import test1 from "../src/assets/tes-1-1.jpg";
-import test2 from "../src/assets/tes-1-2.jpg";
-import test3 from "../src/assets/tes-1-3.jpg";
-import test4 from "../src/assets/tes-1-4.jpg";
-import test5 from "../src/assets/tes-1-5.png";
+// Brand images are now in public/Trusted BY folder
+// Testimonial images are now in public/Testimonials folder
 
 const servicestype = [
   {
@@ -49,29 +41,33 @@ const servicestype = [
 const brandsData = [
   {
     id: 1,
-    imageSrc: brand1,
-    altText: "Jupiter",
+    imageSrc: "/Trusted BY/AAWIC logo.png",
+    altText: "AAWIC",
+    website: "https://www.aawic.org",
   },
   {
     id: 2,
-    imageSrc: brand2,
-    altText: "dyte",
+    imageSrc: "/Trusted BY/haliqo logo.png",
+    altText: "Haliqo",
+    website: "https://www.haliqo.com",
   },
   {
     id: 3,
-    imageSrc: brand3,
-    altText: "fampay",
+    imageSrc: "/Trusted BY/hectors logo.png",
+    altText: "Hectors",
+    website: "https://www.hectorsglobalhair.com/",
   },
-
   {
     id: 4,
-    imageSrc: brand4,
-    altText: "swigg",
+    imageSrc: "/Trusted BY/nfoh-logo.png",
+    altText: "NFOH",
+    website: "https://nfohworld.com/",
   },
   {
     id: 5,
-    imageSrc: brand5,
-    altText: "Mighty",
+    imageSrc: "/Trusted BY/Vholocity Logo.png",
+    altText: "Vholocity",
+    website: "https://www.vholocity.com",
   },
 ];
 const servicesData = [
@@ -80,24 +76,56 @@ const servicesData = [
     icon: "fas fa-code",
     title: "Web Development",
     description:
-      "We provide a wide range of web development services to help you grow your business online.",
-    link: "/service/web-development",
+      "Build powerful, responsive websites and web applications that deliver exceptional user experiences and drive business growth.",
+    lnk: "/service/webDevelopment",
   },
   {
     id: 2,
     icon: "fas fa-mobile-alt",
     title: "App Development",
     description:
-      "We provide a wide range of app development services to help you grow your business online.",
-    lnk: "/service/app-development",
+      "Create innovative mobile applications for iOS and Android that engage users and scale with your business needs.",
+    lnk: "/service/mobileDevelopment",
   },
   {
     id: 3,
     icon: "fas fa-paint-brush",
     title: "UI/UX Designing",
     description:
-      "We provide a wide range of UI/UX designing services to help you grow your business online.",
-    link: "/service/ui-ux-designing",
+      "Design intuitive and beautiful user interfaces that enhance user satisfaction and improve conversion rates.",
+    lnk: "/service/uiux",
+  },
+  {
+    id: 4,
+    icon: "fas fa-palette",
+    title: "Graphic Designing",
+    description:
+      "We provide professional graphic design services to create stunning visual identities and marketing materials for your brand.",
+    lnk: "/service/graphicDesigning",
+  },
+  {
+    id: 5,
+    icon: "fas fa-search",
+    title: "SEO",
+    description:
+      "We provide comprehensive SEO services to improve your website's visibility and drive organic traffic to your business.",
+    lnk: "/service/seo",
+  },
+  {
+    id: 6,
+    icon: "fas fa-shopping-cart",
+    title: "E-commerce",
+    description:
+      "We provide complete e-commerce solutions to help you build and grow your online store with seamless shopping experiences.",
+    lnk: "/service/Ecommerce",
+  },
+  {
+    id: 7,
+    icon: "fas fa-chart-line",
+    title: "Data Science",
+    description:
+      "We provide data science and analytics services to help you make data-driven decisions and unlock insights from your data.",
+    lnk: "/service/dataScience",
   },
 ];
 
@@ -131,45 +159,43 @@ const discountData = [
 const reviewsData = [
   {
     id: 1,
-    pic: test1,
-    name: "Kenzie Edgar",
-    designation: "CEO, Tech Solutions Inc.",
+    pic: "/Testimonials/Haitam.jpeg",
+    name: "Haitam Ajnaoua",
+    designation: "Founder of Haliqo",
+    company: "Haliqo",
+    location: "Belgium",
     review:
-      "Rixon exceeded our expectations with their web development services. Their attention to detail and commitment to deadlines were outstanding. Our platform is now faster, more user-friendly, and highly secure. Highly recommended!",
+      "Abdul delivered an excellent solution using Next.js, Supabase, and AWS, with a strong focus on scalability and reliability. The AI features were well integrated and added real value to the platform, enhancing our workflow efficiency significantly. Peppol-compliant invoice handling was implemented correctly and professionally, meeting all required standards and ensuring seamless compliance. His attention to detail and technical expertise throughout the development process was outstanding. Abdul's ability to understand our business needs and translate them into robust technical solutions has been invaluable. Overall, a very solid and well-executed technical solution that continues to serve our business effectively.",
   },
   {
     id: 2,
-    pic: test2,
-    name: "Stevie Tifft",
-    designation: "Founder, Tifft Technologies",
+    pic: "/Testimonials/michael-pendleton.jpg",
+    name: "Michael Pendleton",
+    designation: "Founder of NFOH",
+    company: "NFOH World",
+    location: "USA",
     review:
-      "Working with Rixon was an absolute pleasure. They transformed our vision into a stunning e-commerce website with seamless functionality. The team was professional, responsive, and went above and beyond to deliver a perfect product.",
+      "Abdul serves as our Lead Technologist, creating a new Digital Economy centered on Media, Arts & Entertainment. He has been instrumental in identifying technology platforms that enable an Independent Data Warehouse, making content more intelligent through AI and machine learning. His innovation provides a smart decentralized highway powered by VR, AR, and Mixed Reality, allowing us to create immersive experiences beyond imagination. I highly recommend Abdul. He creates custom solutions that directly meet your needs and establish an Iconic Advantage in the global marketplace.",
   },
-
   {
     id: 3,
-    pic: test4,
-    name: "Kendall Mcguffie",
-    designation: "CEO, Mcguffie Media Group",
+    pic: "/Testimonials/terra-renee.jpg",
+    name: "Terra Renee",
+    designation: "Founder of AAWIC",
+    company: "AAWIC",
+    location: "USA",
     review:
-      "Rixon is a team of highly skilled professionals who are committed to delivering quality work. They built a beautiful website for my business that is easy to navigate and has helped me attract more clients. I am extremely happy with the results!",
+      "Working with Abdul has been an exceptional experience. His technical expertise and attention to detail transformed our vision into a powerful digital platform. He demonstrated deep understanding of our mission and delivered a solution that not only meets but exceeds our expectations. Abdul's ability to combine cutting-edge technology with user-centric design has significantly elevated our online presence and engagement. His professionalism, communication, and commitment to excellence make him an invaluable partner for any organization looking to make a meaningful impact in the digital space.",
   },
-
   {
     id: 4,
-    pic: test3,
-    name: "Maurice Harnish",
-    designation: "Founder, Harnish Enterprises",
+    pic: "/Testimonials/hectors.jpg",
+    name: "Hector Obeng",
+    designation: "Owner & Founder",
+    company: "Hector's Global Hair",
+    location: "UK",
     review:
-      "I am thrilled with the website that Rixon created for my business. It is visually stunning, easy to use, and has helped me increase my online sales. The team was a pleasure to work with and delivered the project on time and within budget.",
-  },
-  {
-    id: 5,
-    pic: test5,
-    name: "Alyssa Mccarthy",
-    designation: "CEO, Mccarthy Marketing",
-    review:
-      "Rixon exceeded our expectations with their web development services. Their attention to detail and commitment to deadlines were outstanding. Our platform is now faster, more user-friendly, and highly secure. Highly recommended!",
+      "Abdul transformed our business with a comprehensive, AI-enhanced eCommerce platform that perfectly captures our diverse brand offerings. From perfumes and fashion to hair services and beyond, the platform seamlessly handles our entire product range. The intelligent product recommendations, integrated booking system, and responsive design have significantly enhanced our customer experience across all services. Abdul's technical expertise and understanding of our multi-faceted business model have been instrumental in growing our digital presence and streamlining operations.",
   },
 ];
 
@@ -277,19 +303,147 @@ const FAQdata = [
   },
 ];
 const allProjects = [
+  // Web Projects
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "HALIQO – Artisans SaaS",
     category: "web",
-    tags: ["React", "Node.js", "MongoDB"],
-    image: "/placeholder.svg?height=600&width=800",
+    tags: ["React", "Supabase", "OpenAI", "Peppol invoices", "Stripe"],
+    image: "/Projects/Web/Haliqo.png",
     description:
-      "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-    client: "RetailTech Inc.",
-    date: "June 2023",
-    link: "#",
+      "AI-powered business management platform for artisans and craftsmen. Features intelligent quote generation, automated invoicing with Peppol compliance, advanced lead tracking, and seamless payment processing.",
+    client: "Haliqo",
+    date: "",
+    link: "https://www.haliqo.com/",
     github: "#",
     featured: true,
+  },
+  {
+    id: 2,
+    title: "Hectors – eCommerce Store",
+    category: "web",
+    tags: ["Next.js", "Supabase", "OpenAI", "Chatbot", "Stripe"],
+    image: "/Projects/Web/Hectors.png",
+    description:
+      "Modern AI-enhanced eCommerce platform with intelligent product recommendations and integrated booking system. Features responsive design, real-time inventory management, AI-powered chatbot support, and secure payment processing.",
+    client: "Hector's Global Hair",
+    date: "",
+    link: "https://www.hectorsglobalhair.com/",
+    github: "#",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "Dubease – AI Voice Dubbing Platform",
+    category: "web",
+    tags: ["MERN Stack", "FFmpeg", "TTS", "Machine Learning"],
+    image: "/Projects/Web/Dubease.png",
+    description:
+      "Multilingual voice cloning video dubbing platform with emotional voices. Advanced AI powered solution that enables seamless video dubbing without relying on external APIs.",
+    client: "Dubease",
+    date: "",
+    link: "https://dubease.vercel.app/",
+    github: "#",
+    featured: true,
+  },
+  {
+    id: 4,
+    title: "NFOH World – Immersive Digital Entertainment",
+    category: "web",
+    tags: ["Next.js", "VR/AR", "Immersive Tech", "Digital Media"],
+    image: "/Projects/Web/nfoh.png",
+    description:
+      "Next-generation digital entertainment ecosystem blending VR, AR, and mixed reality with creative storytelling.",
+    client: "NFOH",
+    date: "",
+    link: "https://nfohworld.com/",
+    github: "#",
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "Vholocity – Open World Gaming Platform",
+    category: "web",
+    tags: ["Next.js", "Web Platform", "Interactive Design", "Gaming Tech"],
+    image: "/Projects/Web/Vholocity.png",
+    description:
+      "Immersive open world video game platform offering interactive exploration and dynamic gameplay experiences.",
+    client: "Vholocity",
+    date: "",
+    link: "https://vholocity.com/",
+    github: "#",
+    featured: true,
+  },
+  {
+    id: 6,
+    title: "AAWIC – Digital Platform",
+    category: "web",
+    tags: ["Next.js", "React", "Web Platform", "Digital Media"],
+    image: "/Projects/Web/aawic.png",
+    description:
+      "Robust and user-friendly platform for AAWIC that perfectly meets organizational needs. Features modern design, seamless user experience, and comprehensive functionality for digital engagement.",
+    client: "AAWIC",
+    date: "",
+    link: "https://aawic.vercel.app/",
+    github: "#",
+    featured: true,
+  },
+  // App Projects
+  {
+    id: 7,
+    title: "Cabs – Ride Booking App",
+    category: "mobile",
+    tags: ["React Native", "Mobile App", "Booking System"],
+    image: "/Projects/App/Cabs.png",
+    description:
+      "Modern ride booking mobile application with real-time tracking, secure payment processing, and seamless user experience.",
+    client: "Cabs",
+    date: "",
+    link: null,
+    github: "#",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Crypto – Cryptocurrency Trading App",
+    category: "mobile",
+    tags: ["React Native", "Mobile App", "Crypto Trading"],
+    image: "/Projects/App/Crypto.png",
+    description:
+      "Comprehensive cryptocurrency trading mobile application with real-time market data, secure wallet integration, and advanced trading features.",
+    client: "Crypto",
+    date: "",
+    link: null,
+    github: "#",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "Kids Game – Educational Gaming App",
+    category: "mobile",
+    tags: ["React Native", "Mobile App", "Educational Games"],
+    image: "/Projects/App/Kids Game.png",
+    description:
+      "Engaging educational gaming application designed for children with interactive learning experiences and fun gameplay mechanics.",
+    client: "Kids Game",
+    date: "",
+    link: null,
+    github: "#",
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "Restaurant – Food Ordering App",
+    category: "mobile",
+    tags: ["React Native", "Mobile App", "Food Delivery"],
+    image: "/Projects/App/Resturant.png",
+    description:
+      "Complete food ordering and delivery mobile application with menu browsing, order tracking, and integrated payment system.",
+    client: "Restaurant",
+    date: "",
+    link: null,
+    github: "#",
+    featured: false,
   },
 ];
 export {

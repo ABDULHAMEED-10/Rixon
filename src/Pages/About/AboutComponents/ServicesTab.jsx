@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const services = [
   "Web Development",
@@ -40,10 +40,10 @@ const ServicesTab = () => {
       className="max-w-4xl mx-auto"
     >
       <motion.div variants={itemVariants} className="text-center mb-12">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
           Our Services
         </h3>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-300 max-w-2xl mx-auto">
           We offer a comprehensive range of digital services to help your
           business grow and succeed in the digital landscape.
         </p>
@@ -57,31 +57,24 @@ const ServicesTab = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="flex items-start p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="flex items-start p-6 bg-gradient-to-br from-gray-900 to-black border border-green-600/30 rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-600/20 hover:border-green-600 transition-all duration-300 hover:scale-105"
           >
             <div className="flex-shrink-0 mr-4">
-              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                <CheckCircle className="h-5 w-5" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-600/20 to-green-700/20 border-2 border-green-600/30 flex items-center justify-center text-green-600 shadow-lg">
+                <CheckCircle className="h-6 w-6" />
               </div>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-2 text-gray-900">
+              <h4 className="text-lg font-semibold mb-2 text-white">
                 {service}
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 We deliver custom {service.toLowerCase()} solutions tailored to
                 your specific business needs and goals.
               </p>
             </div>
           </motion.div>
         ))}
-      </motion.div>
-
-      <motion.div variants={itemVariants} className="text-center mt-12">
-        <button className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-full font-medium shadow-md hover:bg-green-700 transition-colors duration-300">
-          View All Services
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </button>
       </motion.div>
     </motion.div>
   );

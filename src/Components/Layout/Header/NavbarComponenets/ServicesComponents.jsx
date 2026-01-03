@@ -7,19 +7,9 @@ import { servicestype } from "../../../../demoData.jsx";
 const ServiceComponents = () => {
   return (
     <>
-      <NavLink
-        to="/services"
-        // style={({ isActive }) => {
-        //   return {
-
-        //     color: isActive ? "black" : "gray",
-        //     fontWeight: isActive ? "bold" : "normal",
-        //   };
-        // }}
-        className="navbar__link  py-5 font-bold text-gray-700"
-      >
+      <span className="navbar__link py-5 font-bold text-white hover:text-green-600 transition duration-300 cursor-pointer">
         Services
-      </NavLink>
+      </span>
       <ul className="dropdown">
         {servicestype.map((service) => (
           <ServicesType key={service.id} to={service.to} name={service.title} />

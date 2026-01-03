@@ -1,33 +1,104 @@
-/* eslint-disable no-unused-vars */
-import "./footer.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Mail, Phone } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
   return (
     <footer className="">
-      <div className="bg-gray-100 dark:bg-gray-900 pt-48 mt-36 lg:p-16 md:pt-36 ">
-        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="lg:flex lg:items-start lg:gap-20">
-            <div className="flex flex-col gap-6 lg:col-span-2">
-              <div className="text-teal-600 dark:text-teal-300 lg:flex flex gap-2 items-center lg:items-center lg:justify-start lg:gap-3  ">
-                <img className="rounded-full w-9 h-9" src="/logo.png"></img>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Rixon
-                </h2>
+      <div className="bg-black pt-32 md:pt-40 mt-36 border-t-4 border-green-600">
+        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
+            {/* Brand Section */}
+            <div className="text-center md:text-left">
+              <Link to="/" className="cursor-pointer inline-block mb-4">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tight" style={{ fontFamily: "'Ample Display', 'Arial Black', 'Arial Bold', sans-serif" }}>
+                  <span className="text-white">Rix</span>
+                  <span className="text-green-600">on</span>
+                </h1>
+              </Link>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Elevating businesses, executing ideas, delivering swift experiences. Your digital transformation partner.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="text-center md:text-left">
+              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/projects" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div className="hidden md:block text-center md:text-right">
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="mailto:info@rixon.agency"
+                    className="flex items-center justify-center md:justify-end gap-3 p-2 rounded-lg hover:bg-green-600/10 transition-all duration-300 group"
+                  >
+                    <span className="text-gray-400 group-hover:text-green-600 transition-colors duration-300 text-sm">info@rixon.agency</span>
+                    <div className="w-8 h-8 rounded-lg bg-green-600/20 border border-green-600/30 flex items-center justify-center group-hover:bg-green-600/30 group-hover:border-green-600 transition-all duration-300">
+                      <Mail className="w-4 h-4 text-green-600 group-hover:scale-110 transition-transform" />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:+923000713825"
+                    className="flex items-center justify-center md:justify-end gap-3 p-2 rounded-lg hover:bg-green-600/10 transition-all duration-300 group"
+                  >
+                    <span className="text-gray-400 group-hover:text-green-600 transition-colors duration-300 text-sm">+92 3000 713 825</span>
+                    <div className="w-8 h-8 rounded-lg bg-green-600/20 border border-green-600/30 flex items-center justify-center group-hover:bg-green-600/30 group-hover:border-green-600 transition-all duration-300">
+                      <Phone className="w-4 h-4 text-green-600 group-hover:scale-110 transition-transform" />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
               </div>
-              <ul className="col-span-2 flex justify-start gap-2 lg:col-span-5 lg:justify-start ">
+
+          {/* Divider */}
+          <div className="border-t border-green-600/30 my-8"></div>
+
+          {/* Bottom Section */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-gray-400 text-xs text-center md:text-left">
+              © {currentYear} <span className="text-white">Rix</span><span className="text-green-600">on</span> Agency. All rights reserved.
+            </p>
+            <ul className="flex justify-center gap-6">
                 <li>
                   <a
                     href="https://www.facebook.com/profile.php?id=61569390263675&mibextid=ZbWKwL"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-green-600 transition hover:opacity-75 "
+                    className="text-green-600 transition hover:opacity-75 hover:scale-110"
                   >
                     <span className="sr-only">Facebook</span>
 
                     <svg
-                      className="size-5"
+                      className="size-6 md:size-7"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -51,7 +122,7 @@ const Footer = () => {
                     <span className="sr-only">Instagram</span>
 
                     <svg
-                      className="size-5"
+                      className="size-6 md:size-7"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -70,12 +141,12 @@ const Footer = () => {
                     href="https://twitter.com/devhooks.tech"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-green-600 transition hover:opacity-75"
+                    className="text-green-600 transition hover:opacity-75 hover:scale-110"
                   >
                     <span className="sr-only">Twitter</span>
 
                     <svg
-                      className="size-5"
+                      className="size-6 md:size-7"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -87,15 +158,15 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="https://www.linkedin.com/company/devhoks/"
+                    href="https://www.linkedin.com/company/rixon/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-green-600 transition hover:opacity-75"
+                    className="text-green-600 transition hover:opacity-75 hover:scale-110"
                   >
                     <span className="sr-only">LinkedIn</span>
 
                     <svg
-                      className="size-5"
+                      className="size-6 md:size-7"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
@@ -109,269 +180,8 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-
-              <h1 className="text-gray-400 dark:text-gray-500 ">© Rixon.</h1>
-            </div>
-            <div className="mt-8 grid grid-cols-2 gap-x-8 lg:mt-0 lg:grid-cols-5 ">
-              <div className="col-span-2 "></div>
-
-              <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
-                {/* <form className="w-full">
-                  <label htmlFor="UserEmail" className="sr-only">
-                    {" "}
-                    Email{" "}
-                  </label>
-
-                  <div className="border border-gray-100 p-2 sm:flex sm:items-center sm:gap-4 dark:border-gray-800">
-                    <input
-                      type="email"
-                      id="UserEmail"
-                      placeholder="username@gmail.com"
-                      className="w-full border focus:border-gray-100 focus:ring-gray-100 sm:text-sm bg-gray-100 dark:bg-gray-900 dark:text-white"
-                    />
-
-                    <button className="mt-1 w-full bg-green-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-green-800 sm:mt-0 sm:w-auto sm:shrink-0">
-                      Sign Up
-                    </button>
-                  </div>
-                </form> */}
-              </div>
-
-              <div className="col-span-1 lg:col-span-2">
-                <p className="font-medium text-gray-900 dark:text-white">
-                  Services
-                </p>
-
-                <ul className="mt-6 space-y-4 text-sm">
-                  <li>
-                    <Link
-                      to="/service/webDevelopment"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Web Development
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/service/mobileDevelopment"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      App Development
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/service/uiux"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Ui/Ux Designing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/service/graphicDesigning"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Graphic Designing
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/service/seo"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      SEO Optimisation
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/service/dataScience"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Data Science
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/service/Ecommerce"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Ecommerce
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-span-1 lg:col-span-2">
-                <p className="font-medium text-gray-900 dark:text-white">
-                  Company
-                </p>
-
-                <ul className="mt-6 space-y-4 text-sm">
-                  <li>
-                    <Link
-                      to="/about"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      About Us
-                    </Link>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Our Team
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#reviews"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Reviews
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="col-span-2 sm:col-span-1 mt-8 lg:mt-0">
-                <p className="font-medium text-gray-900 dark:text-white">
-                  Helpful Links
-                </p>
-
-                <ul className="mt-6 space-y-4 text-sm">
-                  <li>
-                    <Link
-                      to="/contact"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      Contact Us
-                    </Link>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                    >
-                      FAQs
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium text-gray-900 dark:text-white">Legal</p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                  >
-                    Accessibility
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                  >
-                    Returns Policy
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                  >
-                    Refund Policy
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                  >
-                    Hiring Statistics
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-
-              {/* <div className="col-span-2 sm:col-span-1">
-              <p className="font-medium text-gray-900 dark:text-white">
-                Downloads
-              </p>
-
-              <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                  >
-                    Marketing Calendar
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-                  >
-                    SEO Infographics
-                  </a>
-                </li>
-              </ul>
-            </div> */}
-            </div>
           </div>
 
-          <div className="mt-8 border-t border-gray-100 pt-8 dark:border-gray-800">
-            <div className="sm:flex sm:justify-between">
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                &copy; {currentYear}. Rixon. All rights reserved.
-              </p>
-              <ul className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
-                <li>
-                  <Link
-                    to="/rules/terms"
-                    className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                  >
-                    Terms & Conditions
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to="/rules/privacy"
-                    className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to="/rules/cookies"
-                    className="text-gray-500 transition hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                  >
-                    Cookies
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

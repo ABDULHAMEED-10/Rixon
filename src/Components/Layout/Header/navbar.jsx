@@ -3,51 +3,40 @@ import "./navbar.css";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import NavHamburger from "./Hamburger/navHamburger";
 import NavComponents from "./NavbarComponenets/NavComponents";
-import ServiceComponents from "./NavbarComponenets/ServicesComponents";
 const Navbar = () => {
   const location = useLocation();
-  const isServicePath = location.pathname.includes("service");
 
   return (
-    <div className="navbar__container flex flex-row items-center gap-20 px-12 md:justify-around fixed top-0 left-0 right-0 z-50 bg-white">
+    <div className="navbar__container flex flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 fixed top-0 left-0 right-0 z-50 bg-black border-b border-green-600/30 shadow-lg">
       <div className="navbar__left flex flex-row items-center justify-center gap-2">
-        <img src="/logo.png" alt="Rixon" className="cursor-pointer"></img>
-        <a href="/" className="navbar__logo">
-          Rixon
+        <a href="/" className="cursor-pointer">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight tracking-tight" style={{ fontFamily: "'Ample Display', 'Arial Black', 'Arial Bold', sans-serif" }}>
+            <span className="text-white">Rix</span>
+            <span className="text-green-600">on</span>
+          </h1>
         </a>
       </div>
 
-      <div className="navbar__right hidden md:flex lg:gap-2 lg:justify-between md:justify-end sm:justify-end ">
-        <ul className="navbar__list ">
+      <div className="navbar__right hidden md:flex items-center justify-center flex-1">
+        <ul className="navbar__list flex-wrap">
           <li>
             <NavComponents toward="" nam="Home" />
           </li>
-          <div className="flex items-center align-center gap-1 for__icon navbar__item">
-            <li>
-              <ServiceComponents />
-            </li>
-            <i
-              className="fa-solid fa-angle-down drop__down__icon text-gray-600"
-              // style={{ color: isServicePath ? "black" : "gray" }}
-            ></i>
-          </div>
           <li>
             <NavComponents toward="projects" nam="Projects" />
           </li>
           <li>
-            <NavComponents toward="about" nam="About us" />
+            <NavComponents toward="about" nam="About" />
           </li>
         </ul>
-        <button className="flex items-center align-center transition duration-300 transform hover:scale-105">
-          <NavLink to="/contact" className="nav__button">
-            Contact
-          </NavLink>
-        </button>
       </div>
 
-      <NavHamburger />
+      <div className="flex items-center ml-auto md:ml-0">
+        <NavLink to="/contact" className="nav__button text-sm sm:text-base px-4 py-1.5 sm:px-6 sm:py-2.5">
+          Contact
+        </NavLink>
+      </div>
     </div>
   );
 };

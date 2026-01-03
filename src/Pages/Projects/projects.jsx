@@ -4,7 +4,7 @@ import ProjectsSection from "./ProjectsComponents/ProjectsSection";
 
 export const projects = () => {
   return (
-    <div>
+    <div className="bg-black min-h-screen">
       <ProjectsSection />
     </div>
   );

@@ -5,8 +5,7 @@ import { NavLink } from "react-router-dom";
 import "../navbar.css";
 export const ServicesType = ({ to, name }) => {
   return (
-    <li className="flex items-center  justify-start">
-      <span className="line ml-3 "></span>
+    <li className="flex items-center justify-start">
       <NavLink to={to}>{name}</NavLink>
     </li>
   );

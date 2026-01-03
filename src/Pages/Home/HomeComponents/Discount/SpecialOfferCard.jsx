@@ -14,21 +14,21 @@ const DiscountCard = ({ prop }) => {
     }
   };
   return (
-    <div className="overflow-hidden px-18 py-10 bg-white border border-white rounded-lg flex flex-col items-center justify-center hover:scale-105 transition duration-300">
+    <div className="overflow-hidden px-4 sm:px-6 md:px-8 py-8 sm:py-10 bg-gradient-to-br from-gray-900 via-gray-900 to-black border border-green-600 rounded-xl flex flex-col items-center justify-center hover:scale-105 hover:border-green-500 hover:shadow-2xl hover:shadow-green-600/20 transition-all duration-300 shadow-lg">
       <div
-        className={`mb-4 w-24 h-24 text-5xl rounded-lg flex items-center justify-center text-white ${getBackgroundColor(
+        className={`mb-4 sm:mb-5 w-20 h-20 sm:w-24 sm:h-24 text-4xl sm:text-5xl rounded-lg flex items-center justify-center text-white ${getBackgroundColor(
           prop.id
         )}`}
       >
-        <i className={`text-5xl mix-blend-screen ${prop.icon}`}></i>
+        <i className={`text-4xl sm:text-5xl mix-blend-screen ${prop.icon}`}></i>
       </div>
       <Link
-        className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-900"
+        className="mb-3 sm:mb-4 px-2 text-xl sm:text-2xl font-semibold tracking-tight text-white hover:text-green-600 transition-colors duration-300 text-center"
         to={prop.lnk}
       >
         <h5 className="inline">{prop.title}</h5>
       </Link>
-      <p className="text-center text-md font-normal text-gray-500 dark:text-gray-500">
+      <p className="text-center text-sm sm:text-base md:text-md font-normal text-gray-300 px-2 sm:px-3">
         {prop.description}
       </p>
     </div>

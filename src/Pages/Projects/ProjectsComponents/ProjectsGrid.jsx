@@ -26,11 +26,10 @@ const ProjectsGrid = ({ projects, visibleProjects, onProjectClick }) => {
     <motion.div
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
+      animate="visible"
       className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
     >
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {projects.slice(0, visibleProjects).map((project) => (
           <motion.div key={project.id} variants={itemVariants} layout>
             <ProjectCard

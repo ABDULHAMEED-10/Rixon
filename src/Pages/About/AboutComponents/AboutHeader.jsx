@@ -9,14 +9,14 @@ const AboutHeader = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="inline-block py-1 px-3 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+        <span className="inline-block py-1 px-3 rounded-full bg-green-600/20 text-green-600 border border-green-600/30 text-sm font-medium mb-4">
           About Us
         </span>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
           We&apos;re a team of digital{" "}
           <span className="text-green-600">innovators</span>
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
           We combine creativity, technical expertise, and strategic thinking to
           deliver exceptional digital solutions that drive business growth.
         </p>

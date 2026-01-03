@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const AboutTabs = ({ activeTab, setActiveTab }) => {
-  const tabs = ["company", "services", "team"];
+  const tabs = ["founder", "services"];
 
   return (
     <div className="flex flex-wrap justify-center mb-12 gap-2">
@@ -11,8 +11,8 @@ const AboutTabs = ({ activeTab, setActiveTab }) => {
           onClick={() => setActiveTab(tab)}
           className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
             activeTab === tab
-              ? "bg-green-600 text-white shadow-md"
-              : "bg-white text-gray-700 hover:bg-gray-100"
+              ? "bg-green-600 text-white shadow-md scale-105"
+              : "bg-gradient-to-br from-gray-900 to-black text-gray-300 hover:text-green-600 hover:bg-gradient-to-br hover:from-gray-800 hover:to-gray-900"
           }`}
         >
           {tab.charAt(0).toUpperCase() + tab.slice(1)}

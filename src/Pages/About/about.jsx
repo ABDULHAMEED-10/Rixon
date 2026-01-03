@@ -2,7 +2,7 @@ import AboutSection from "./AboutComponents/AboutSection";
 
 const About = () => {
   return (
-    <div>
+    <div className="bg-black min-h-screen">
       <AboutSection />
     </div>
   );
