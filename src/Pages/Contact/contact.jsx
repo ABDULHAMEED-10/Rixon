@@ -122,7 +122,7 @@ const Contact = () => {
                   <p className="text-xs text-gray-400 mb-3">Connect with us on social media</p>
                   <div className="flex items-center gap-3 flex-wrap">
                   <a
-                    href="https://twitter.com/devhooks"
+                    href="https://x.com/abdulhameed013"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-300 hover:scale-110 shadow-lg"
@@ -131,7 +131,7 @@ const Contact = () => {
                     <Twitter className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://www.facebook.com/profile.php?id=61569390263675&mibextid=ZbWKwL"
+                    href="https://www.facebook.com/Abdul.Hameedx001"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-300 hover:scale-110 shadow-lg"
@@ -140,7 +140,7 @@ const Contact = () => {
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://instagram.com/devhooks.tech"
+                    href="https://www.instagram.com/abdulhameed.0/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-300 hover:scale-110 shadow-lg"
@@ -149,7 +149,7 @@ const Contact = () => {
                     <Instagram className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/rixon/"
+                    href="https://www.linkedin.com/in/mrahameed/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-green-600 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-300 hover:scale-110 shadow-lg"

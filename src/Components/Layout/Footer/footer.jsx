@@ -90,7 +90,7 @@ const Footer = () => {
             <ul className="flex justify-center gap-6">
                 <li>
                   <a
-                    href="https://www.facebook.com/profile.php?id=61569390263675&mibextid=ZbWKwL"
+                    href="https://www.facebook.com/Abdul.Hameedx001"
                     rel="noreferrer"
                     target="_blank"
                     className="text-green-600 transition hover:opacity-75 hover:scale-110"
@@ -114,7 +114,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="https://instagram.com/devhooks.tech"
+                    href="https://www.instagram.com/abdulhameed.0/"
                     rel="noreferrer"
                     target="_blank"
                     className="text-green-600 transition hover:opacity-75 "
@@ -138,7 +138,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="https://twitter.com/devhooks.tech"
+                    href="https://x.com/abdulhameed013"
                     rel="noreferrer"
                     target="_blank"
                     className="text-green-600 transition hover:opacity-75 hover:scale-110"
@@ -158,7 +158,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="https://www.linkedin.com/company/rixon/"
+                    href="https://www.linkedin.com/in/mrahameed/"
                     rel="noreferrer"
                     target="_blank"
                     className="text-green-600 transition hover:opacity-75 hover:scale-110"
