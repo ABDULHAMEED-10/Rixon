@@ -11,6 +11,49 @@ const Contact = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
+  // Structured data for contact page SEO
+  const contactStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Rixon Agency",
+    "description": "Get in touch with Rixon for free consultation. Contact us via email, phone, or book a meeting.",
+    "url": "https://www.rixon.agency/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Rixon",
+      "url": "https://www.rixon.agency",
+      "email": "info@rixon.agency",
+      "telephone": "+92-3000-713-825",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+92-3000-713-825",
+          "contactType": "Customer Service",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English", "Arabic", "Urdu", "French", "Spanish", "German", "Italian", "Portuguese"]
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/mrahameed/",
+        "https://www.instagram.com/abdulhameed.0/",
+        "https://x.com/abdulhameed013",
+        "https://www.facebook.com/Abdul.Hameedx001"
+      ]
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://calendly.com/abdulhameed000650/30min",
+        "name": "Free Consultation Booking"
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Free 30-Minute Consultation with Rixon"
+      }
+    }
+  };
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -30,6 +73,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactStructuredData) }}
+      />
       {/* Header Section */}
       <section className="py-20 my-10 overflow-hidden bg-black text-white">
         <div className="container mx-auto px-4">

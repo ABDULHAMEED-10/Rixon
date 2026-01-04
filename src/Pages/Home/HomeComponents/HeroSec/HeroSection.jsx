@@ -14,8 +14,41 @@ const HeroSection = () => {
     "Data Science",
   ];
 
+  // Structured data for SEO - helps Google display contact links in search results
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Rixon",
+    "description": "Innovative digital solutions and tech agency specializing in web development, app development, AI applications, and e-commerce platforms.",
+    "url": "https://www.rixon.agency",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+92-3000-713-825",
+      "contactType": "Customer Service",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English", "Arabic", "Urdu", "French", "Spanish", "German", "Italian", "Portuguese"]
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://calendly.com/abdulhameed000650/30min",
+        "name": "Free Consultation"
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Free 30-Minute Consultation"
+      }
+    }
+  };
+
   return (
     <div className="hero__section__wrapper py-8 py-10 rounded-b-3xl lg:rounded-b-[100px] bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden mt-20 md:mt-10 lg:mt-0">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-10 -left-10 w-40 h-40 md:w-64 md:h-64 rounded-full bg-green-600/20 opacity-60 animate-pulse"></div>
@@ -59,6 +92,8 @@ const HeroSection = () => {
               <a
                 href="https://wa.me/+923000713825"
                 className="w-auto mx-3 lg:mx-4 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-base font-semibold rounded-full border border-green-600 bg-transparent text-green-600 hover:bg-green-600 hover:text-green-600 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-md group"
+                aria-label="Contact Now via WhatsApp"
+                title="Contact Now - Get in Touch via WhatsApp"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +111,8 @@ const HeroSection = () => {
               <a
                 href="https://calendly.com/abdulhameed000650/30min"
                 className="nav__button w-auto mx-3 lg:mx-4 flex items-center justify-center gap-2"
+                aria-label="Book Free Consultation - 30 Minutes"
+                title="Free Consultation - Book Your 30-Minute Session"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
