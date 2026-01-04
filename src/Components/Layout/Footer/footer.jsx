@@ -13,7 +13,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="text-center md:text-left">
               <Link to="/" className="cursor-pointer inline-block mb-4">
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tight" style={{ fontFamily: "'Ample Display', 'Arial Black', 'Arial Bold', sans-serif" }}>
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tight">
                   <span className="text-white">Rix</span>
                   <span className="text-green-600">on</span>
                 </h1>

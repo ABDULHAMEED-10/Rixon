@@ -122,7 +122,7 @@ const CompanyTab = () => {
 
       {/* Company Story */}
       <motion.div variants={itemVariants} className="bg-gradient-to-br from-gray-900 to-black border border-green-600 rounded-xl p-8 md:p-12 shadow-lg hover:border-green-500 hover:shadow-2xl hover:shadow-green-600/20 transition-all duration-300">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white" style={{ fontFamily: "'Ample Display', 'Arial Black', 'Arial Bold', sans-serif" }}>
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
           About <span className="text-white">Rix</span><span className="text-green-600">on</span> Agency
         </h3>
         <p className="text-gray-300 mb-6 leading-relaxed">
