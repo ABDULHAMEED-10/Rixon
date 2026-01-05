@@ -2,9 +2,10 @@ import Helmet from "react-helmet";
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 
-const MetaData = ({ title, description, image }) => {
+const MetaData = ({ title, description, image, keywords }) => {
     const location = useLocation();
-    const defaultDescription = "For over six years, Rixon has been delivering innovative digital solutions with creativity, precision, and excellence. We specialize in AI-driven applications, sophisticated e-commerce platforms, and custom web and mobile solutions. Our comprehensive end-to-end service spans design, development, automation, and deployment, with successful collaborations across the UK, USA, Gulf regions, Australia, Canada, France, and Italy.";
+    const defaultDescription = "Rixon is a leading software company and software agency in the UK and USA, delivering innovative digital solutions for over six years. We specialize in custom software development, AI-driven applications, web development, mobile apps, and e-commerce platforms. Trusted software agency serving clients across the UK, USA, and globally.";
+    const defaultKeywords = "software company, software agency, software development company, custom software development, software agency UK, software company USA, web development, app development, AI applications, e-commerce, digital solutions, UI/UX design, tech agency, software solutions";
     const defaultImage = "/logo.png";
     const siteUrl = "https://www.rixon.agency";
     
@@ -13,15 +14,16 @@ const MetaData = ({ title, description, image }) => {
     const fullUrl = `${siteUrl}${currentPath}`;
     
     const metaDescription = description || defaultDescription;
+    const metaKeywords = keywords || defaultKeywords;
     const metaImage = image || defaultImage;
     const fullImageUrl = metaImage.startsWith('http') ? metaImage : `${siteUrl}${metaImage}`;
-    const pageTitle = title === "Home" ? "Rixon - Innovative Digital Solutions & Tech Agency" : `${title} | Rixon`;
+    const pageTitle = title === "Home" ? "Rixon - Leading Software Company & Software Agency | UK & USA" : `${title} | Rixon`;
 
     return (
         <Helmet>
             <title>{pageTitle}</title>
             <meta name="description" content={metaDescription} />
-            <meta name="keywords" content="web development, app development, AI applications, e-commerce, digital solutions, UI/UX design, custom software, tech agency" />
+            <meta name="keywords" content={metaKeywords} />
             
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
@@ -49,6 +51,7 @@ MetaData.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     image: PropTypes.string,
+    keywords: PropTypes.string,
 };
 
 export default MetaData;

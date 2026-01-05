@@ -29,6 +29,9 @@ const Navbar = () => {
           <li>
             <NavComponents toward="about" nam="About" />
           </li>
+          <li>
+            <NavComponents toward="tools" nam="Tools" />
+          </li>
         </ul>
       </div>
 

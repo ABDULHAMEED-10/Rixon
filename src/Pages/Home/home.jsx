@@ -15,7 +15,8 @@ const Home = () => {
     <div className="bg-black min-h-screen">
       <MetaData 
         title="Home" 
-        description="For over six years, Rixon has been delivering innovative digital solutions with creativity, precision, and excellence. We specialize in AI-driven applications, sophisticated e-commerce platforms, and custom web and mobile solutions."
+        description="Rixon is a leading software company and software agency in the UK and USA, delivering innovative digital solutions for over six years. We specialize in custom software development, AI-driven applications, web development, mobile apps, and e-commerce platforms. Trusted software agency serving clients globally."
+        keywords="software company, software agency, software development company, custom software development, software agency UK, software company USA, web development, app development, AI applications, e-commerce, digital solutions, software solutions"
       />
       <HeroSection />
       <Brand />

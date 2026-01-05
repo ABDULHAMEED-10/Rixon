@@ -17,10 +17,17 @@ const HeroSection = () => {
   // Structured data for SEO - helps Google display contact links in search results
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
+    "@id": "https://www.rixon.agency/#organization",
     "name": "Rixon",
-    "description": "Innovative digital solutions and tech agency specializing in web development, app development, AI applications, and e-commerce platforms.",
+    "description": "Leading software company and software agency in the UK and USA, specializing in custom software development, web development, app development, AI applications, and e-commerce platforms.",
     "url": "https://www.rixon.agency",
+    "logo": "https://www.rixon.agency/logo.png",
+    "sameAs": [],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": ["GB", "US"]
+    },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+92-3000-713-825",

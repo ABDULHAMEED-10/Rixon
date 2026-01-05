@@ -6,6 +6,8 @@ import HomePage from "./Pages/Home/home";
 import AboutUs from "./Pages/About/about";
 import Contact from "./Pages/Contact/contact";
 import Projects from "./Pages/Projects/projects";
+import LocationPage from "./Pages/Location/LocationPage";
+import Tools from "./Pages/Tools/Tools";
 import Layout from "./Components/Layout";
 
 // 404 Page Component
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/tools",
+        element: <Tools />,
+      },
+      {
+        path: "/location/:slug",
+        element: <LocationPage />,
       },
       // 404 handler - must be last
       {

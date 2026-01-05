@@ -3,7 +3,7 @@ import Footer from "./Layout/Footer/footer";
 import Navbar from "./Layout/Header/navbar";
 import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { Zap, X, Phone, Calendar, Home, Briefcase, User } from "lucide-react";
+import { Zap, X, Phone, Calendar, Home, Briefcase, User, Wrench } from "lucide-react";
 
 import CallToAction from "../Pages/Home/HomeComponents/CallToAction/CallToAction.jsx";
 import { Outlet } from "react-router";
@@ -87,6 +87,22 @@ const Layout = () => {
                 <div>
                   <p className="text-sm font-semibold text-white">About</p>
                   <p className="text-xs text-gray-400">Learn more</p>
+                </div>
+              </Link>
+
+              <Link
+                to="/tools"
+                onClick={() => setIsContactMenuVisible(false)}
+                className={`flex items-center gap-3 p-3 rounded-lg hover:bg-green-600/20 transition-all duration-300 group ${
+                  location.pathname === "/tools" ? "bg-green-600/20" : ""
+                }`}
+              >
+                <div className="w-10 h-10 rounded-lg bg-green-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Wrench className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Tools</p>
+                  <p className="text-xs text-gray-400">Free utilities</p>
                 </div>
               </Link>
             </div>
