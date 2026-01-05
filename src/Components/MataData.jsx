@@ -17,7 +17,7 @@ const MetaData = ({ title, description, image, keywords }) => {
     const metaKeywords = keywords || defaultKeywords;
     const metaImage = image || defaultImage;
     const fullImageUrl = metaImage.startsWith('http') ? metaImage : `${siteUrl}${metaImage}`;
-    const pageTitle = title === "Home" ? "Rixon - Leading Software Company & Software Agency | UK & USA" : `${title} | Rixon`;
+    const pageTitle = title === "Home" ? "Rixon - Software Development Company & Digital Agency in UK & USA" : `${title} | Rixon`;
 
     return (
         <Helmet>
