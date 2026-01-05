@@ -84,8 +84,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
-              We are a Top Agency serving clients globally with over 7+ Active Clients and 48+ Projects across
-              Europe, America, UK, Australia, and Worldwide.
+              We are a Top Agency serving clients globally. Our goal is to establish Rixon as a leading digital solutions agency in the UK market.
             </p>
 
             <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row justify-center items-center ">
