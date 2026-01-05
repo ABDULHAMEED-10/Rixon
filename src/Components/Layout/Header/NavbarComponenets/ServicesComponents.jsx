@@ -12,7 +12,7 @@ const ServiceComponents = () => {
       </span>
       <ul className="dropdown">
         {servicestype.map((service) => (
-          <ServicesType key={service.id} to={service.to} name={service.title} />
+          <ServicesType key={service.id} name={service.title} />
         ))}
       </ul>
     </>

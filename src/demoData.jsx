@@ -4,37 +4,30 @@
 const servicestype = [
   {
     id: 1,
-    to: "/service/webDevelopment",
     title: "Web Development",
   },
   {
     id: 2,
-    to: "/service/mobileDevelopment",
     title: "App Development",
   },
   {
     id: 3,
-    to: "/service/uiux",
     title: "UI/UX Designing",
   },
   {
     id: 4,
-    to: "/service/graphicDesigning",
     title: "Graphic Designing",
   },
   {
     id: 5,
-    to: "/service/seo",
     title: "SEO",
   },
   {
     id: 6,
-    to: "/service/Ecommerce",
     title: "E-commerce",
   },
   {
     id: 7,
-    to: "/service/dataScience",
     title: "Data Science",
   },
 ];
@@ -77,7 +70,6 @@ const servicesData = [
     title: "Web Development",
     description:
       "Build powerful, responsive websites and web applications that deliver exceptional user experiences and drive business growth.",
-    lnk: "/service/webDevelopment",
   },
   {
     id: 2,
@@ -85,7 +77,6 @@ const servicesData = [
     title: "App Development",
     description:
       "Create innovative mobile applications for iOS and Android that engage users and scale with your business needs.",
-    lnk: "/service/mobileDevelopment",
   },
   {
     id: 3,
@@ -93,7 +84,6 @@ const servicesData = [
     title: "UI/UX Designing",
     description:
       "Design intuitive and beautiful user interfaces that enhance user satisfaction and improve conversion rates.",
-    lnk: "/service/uiux",
   },
   {
     id: 4,
@@ -101,7 +91,6 @@ const servicesData = [
     title: "Graphic Designing",
     description:
       "We provide professional graphic design services to create stunning visual identities and marketing materials for your brand.",
-    lnk: "/service/graphicDesigning",
   },
   {
     id: 5,
@@ -109,7 +98,6 @@ const servicesData = [
     title: "SEO",
     description:
       "We provide comprehensive SEO services to improve your website's visibility and drive organic traffic to your business.",
-    lnk: "/service/seo",
   },
   {
     id: 6,
@@ -117,7 +105,6 @@ const servicesData = [
     title: "E-commerce",
     description:
       "We provide complete e-commerce solutions to help you build and grow your online store with seamless shopping experiences.",
-    lnk: "/service/Ecommerce",
   },
   {
     id: 7,
@@ -125,7 +112,6 @@ const servicesData = [
     title: "Data Science",
     description:
       "We provide data science and analytics services to help you make data-driven decisions and unlock insights from your data.",
-    lnk: "/service/dataScience",
   },
 ];
 
