@@ -35,7 +35,8 @@ import {
   Layers,
   Sparkles,
   ImageIcon,
-  Crop
+  Crop,
+  Mic
 } from "lucide-react";
 
 const Tools = () => {
@@ -334,6 +335,19 @@ const Tools = () => {
           icon: FileCode
         }
       ]
+    },
+    {
+      category: "Business & AI Tools",
+      items: [
+        {
+          name: "SayMic - AI Voice Solution",
+          description: "SayMic is a versatile AI-powered voice solution that businesses can embed on their websites to capture customer requests instantly. Each mic is tied to a specific business via a unique key, allowing users to speak directly to that business, while the solution converts speech into structured text and translates it if needed. Businesses can customize the mic icon, shortcut name, and industry-specific fields—like pickup/drop for cabs, orders for restaurants, or appointments for salons—so leads are parsed accurately and delivered via email, WhatsApp, or dashboard notifications. Users can create mobile shortcuts to access a specific business mic instantly, making SayMic a fast, convenient, and actionable tool for generating high-quality leads across multiple industries, all through one general solution.",
+          url: "https://saymic.com/",
+          keywords: "saymic, ai voice solution, voice mic, voice to text, customer voice requests, ai voice assistant, business voice solution, voice lead generation, speech to text, voice capture tool, embedded voice solution, ai mic, voice automation",
+          icon: Mic,
+          embedded: true
+        }
+      ]
     }
   ];
 
@@ -375,6 +389,55 @@ const Tools = () => {
               projects with these professional-grade utilities.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* SayMic Embedded Section */}
+      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#0F1813] to-[#15201A]">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-8"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-600/20 to-green-700/20 border-2 border-green-600/50 text-green-600 rounded-xl mb-4">
+              <Mic className="w-8 h-8" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              SayMic - <span className="text-green-600">AI Voice Solution</span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
+              Capture customer requests instantly with AI-powered voice technology. SayMic converts speech to structured text, 
+              translates when needed, and delivers leads via email, WhatsApp, or dashboard notifications.
+            </p>
+          </motion.div>
+          
+          <div className="bg-black/30 rounded-xl p-6 md:p-8 border border-green-600/30 shadow-2xl">
+            <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900">
+              <iframe
+                src="https://saymic.com/"
+                title="SayMic AI Voice Solution"
+                className="w-full h-full border-0"
+                allow="microphone"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-6 text-center">
+              <a
+                href="https://saymic.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Visit SayMic.com
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -455,7 +518,7 @@ const Tools = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors text-sm group/btn"
                           >
-                            Use Tool
+                            {tool.embedded ? "Visit Tool" : "Use Tool"}
                             <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
