@@ -11,10 +11,11 @@ const Navbar = () => {
     <div className="navbar__container flex flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 fixed top-0 left-0 right-0 z-50 bg-black border-b border-green-600/30 shadow-lg">
       <div className="navbar__left flex flex-row items-center justify-center gap-2">
         <a href="/" className="cursor-pointer">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-            <span className="text-white">Rix</span>
-            <span className="text-green-600">on</span>
-          </h1>
+          <img 
+            src="/rixon logo.png" 
+            alt="Rixon Logo" 
+            className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+          />
         </a>
       </div>
 

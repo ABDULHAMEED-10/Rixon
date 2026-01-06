@@ -13,12 +13,13 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="text-center md:text-left">
               <Link to="/" className="cursor-pointer inline-block mb-4">
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tight">
-                  <span className="text-white">Rix</span>
-                  <span className="text-green-600">on</span>
-                </h1>
+                <img 
+                  src="/rixon logo.png" 
+                  alt="Rixon Logo" 
+                  className="h-10 sm:h-12 md:h-14 w-auto object-contain mx-auto md:mx-0"
+                />
               </Link>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed mt-4">
                 Elevating businesses, executing ideas, delivering swift experiences. Your digital transformation partner.
               </p>
             </div>
