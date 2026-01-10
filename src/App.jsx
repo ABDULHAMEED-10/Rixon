@@ -7,6 +7,7 @@ import AboutUs from "./Pages/About/about";
 import Contact from "./Pages/Contact/contact";
 import Projects from "./Pages/Projects/projects";
 import LocationPage from "./Pages/Location/LocationPage";
+import LocationsHub from "./Pages/Locations/LocationsHub";
 import Tools from "./Pages/Tools/Tools";
 import Layout from "./Components/Layout";
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/tools",
         element: <Tools />,
+      },
+      {
+        path: "/locations",
+        element: <LocationsHub />,
       },
       {
         path: "/location/:slug",

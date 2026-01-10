@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -48,35 +47,56 @@ const Footer = () => {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link to="/locations" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                    Locations
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Contact Info */}
-            <div className="hidden md:block text-center md:text-right">
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="mailto:info@rixon.agency"
-                    className="flex items-center justify-center md:justify-end gap-3 p-2 rounded-lg hover:bg-green-600/10 transition-all duration-300 group"
-                  >
-                    <span className="text-gray-400 group-hover:text-green-600 transition-colors duration-300 text-sm">info@rixon.agency</span>
-                    <div className="w-8 h-8 rounded-lg bg-green-600/20 border border-green-600/30 flex items-center justify-center group-hover:bg-green-600/30 group-hover:border-green-600 transition-all duration-300">
-                      <Mail className="w-4 h-4 text-green-600 group-hover:scale-110 transition-transform" />
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="tel:+923000713825"
-                    className="flex items-center justify-center md:justify-end gap-3 p-2 rounded-lg hover:bg-green-600/10 transition-all duration-300 group"
-                  >
-                    <span className="text-gray-400 group-hover:text-green-600 transition-colors duration-300 text-sm">+92 3000 713 825</span>
-                    <div className="w-8 h-8 rounded-lg bg-green-600/20 border border-green-600/30 flex items-center justify-center group-hover:bg-green-600/30 group-hover:border-green-600 transition-all duration-300">
-                      <Phone className="w-4 h-4 text-green-600 group-hover:scale-110 transition-transform" />
-                    </div>
-                  </a>
-                </li>
-              </ul>
+            {/* Top Client Locations */}
+            <div className="text-center md:text-right">
+              <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Top Client Locations</h3>
+              
+              {/* UK Top Cities */}
+              <div className="mb-6">
+                <h4 className="text-gray-500 text-xs font-semibold mb-3 uppercase tracking-wider">UK</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/location/london-uk" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                      London
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/location/manchester-uk" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                      Manchester
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* USA Top Cities */}
+              <div>
+                <h4 className="text-gray-500 text-xs font-semibold mb-3 uppercase tracking-wider">USA</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/location/new-york-usa" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                      New York
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/location/los-angeles-usa" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                      Los Angeles
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/location/chicago-usa" className="text-gray-400 hover:text-green-600 transition-colors duration-300 text-sm">
+                      Chicago
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
               </div>
 

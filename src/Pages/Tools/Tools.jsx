@@ -369,7 +369,13 @@ const Tools = () => {
       
       {/* Hero Section */}
       <section className="py-20 my-10 overflow-hidden bg-black text-white">
-        <div className="container mx-auto px-4">
+        {/* Background decorations */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-green-900/20 rounded-full opacity-30 blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-green-800/10 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -486,8 +492,20 @@ const Tools = () => {
                   className={`mb-20 ${!isVisible ? "hidden" : ""}`}
                   style={{ display: isVisible ? "block" : "none" }}
                 >
-                  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
-                    {category.category}
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 text-center">
+                    {category.category.includes("Tools") ? (
+                      <>
+                        {category.category.replace(" Tools", "")}{" "}
+                        <span className="text-green-600">Tools</span>
+                      </>
+                    ) : (
+                      <>
+                        {category.category.split(" ").slice(0, -1).join(" ")}{" "}
+                        <span className="text-green-600">
+                          {category.category.split(" ").slice(-1)[0]}
+                        </span>
+                      </>
+                    )}
                   </h2>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,111 +1,107 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { useParams, Navigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, Navigate, Link } from "react-router-dom";
 import MetaData from "../../Components/MataData";
-import { ukLocations, usaLocations } from "../../../locationsData";
-
-// Helper function to create URL-friendly slug
-const createSlug = (city, region, state, country) => {
-  const citySlug = city.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-  const countrySlug = country.toLowerCase();
-  return `${citySlug}-${countrySlug}`;
-};
+import { ukLocations, usaLocations, createSlug } from "../../../locationContent";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 // Helper function to find location by slug
 const findLocationBySlug = (slug) => {
-  // Try UK locations first
+  // Search UK locations
   for (const location of ukLocations) {
     const locationSlug = createSlug(location.city, location.region, null, location.country);
     if (locationSlug === slug) {
       return location;
     }
   }
-  
-  // Try USA locations
+  // Search USA locations
   for (const location of usaLocations) {
     const locationSlug = createSlug(location.city, null, location.state, location.country);
     if (locationSlug === slug) {
       return location;
     }
   }
-  
   return null;
 };
 
 const LocationPage = () => {
   const { slug } = useParams();
   const location = findLocationBySlug(slug);
+  const [openFAQ, setOpenFAQ] = useState(null);
 
+  // Check if location exists
   if (!location) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/locations" replace />;
   }
 
   const locationName = location.city;
-  const locationRegion = location.region || location.state;
+  const locationRegion = location.region;
   const locationCountry = location.country;
   const fullLocationName = `${locationName}, ${locationRegion}, ${locationCountry}`;
 
-  const isUK = locationCountry === "UK";
-  const isUSA = locationCountry === "USA";
-  const locationType = isUK ? "UK" : isUSA ? "USA" : "";
-  
-  const pageTitle = `${isUK || isUSA ? `Software Company & Software Agency in ${locationName}` : `Digital Solutions in ${locationName}`}${locationRegion ? `, ${locationRegion}` : ""} | Rixon`;
-  const metaDescription = `Rixon is a leading software company and software agency in ${locationName}, ${locationRegion}, ${locationCountry}. We provide custom software development, web development, app development, AI applications, and e-commerce solutions. Trusted ${locationType} software agency serving ${locationName} businesses.`;
+  const pageTitle = `Software Company & Software Agency in ${locationName}, ${locationRegion} | Rixon`;
+  const metaDescription = `Rixon is a leading software company and software agency in ${locationName}, ${locationRegion}, ${locationCountry}. We provide custom software development, web development, app development, AI applications, and e-commerce solutions. Trusted UK software agency serving ${locationName} businesses.`;
 
   return (
     <div className="bg-black min-h-screen">
       <MetaData 
         title={pageTitle}
         description={metaDescription}
+        keywords={`software agency ${locationName}, software company ${locationName}, web development ${locationName}, app development ${locationName}, digital solutions ${locationName}, ${locationName} software agency`}
       />
       
       {/* Hero Section */}
-      <div className="pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-            {isUK || isUSA ? (
-              <>
-                Software Company & Software Agency in{" "}
-                <span className="text-green-600">{locationName}</span>
-              </>
-            ) : (
-              <>
-                Digital Solutions in{" "}
-                <span className="text-green-600">{locationName}</span>
-              </>
-            )}
-          </h1>
-          {locationRegion && (
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8">
+      <section className="py-20 my-10 overflow-hidden bg-black text-white">
+        {/* Background decorations */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-green-900/20 rounded-full opacity-30 blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-green-800/10 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <span className="inline-block py-1 px-3 rounded-full bg-green-600/20 text-green-600 border border-green-600/30 text-sm font-medium mb-4">
+              {locationCountry} Location
+            </span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Software Company & Software Agency in{" "}
+              <span className="text-green-600">{locationName}</span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-gray-300 mb-4">
               {locationRegion}, {locationCountry}
             </p>
-          )}
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            {isUK || isUSA ? (
-              <>
-                Rixon is a leading software company and software agency in {locationName}, {locationRegion}. 
-                We provide custom software development, web development, app development, and digital transformation 
-                services tailored for businesses in {locationName}.
-              </>
-            ) : (
-              <>
-                Professional web development, app development, and digital transformation services 
-                tailored for businesses in {locationName}.
-              </>
-            )}
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              {location.intro}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Context Section */}
+      <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Why {locationName} Businesses Choose{" "}
+            <span className="text-green-600">Rixon</span>
+          </h2>
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            {location.businessContext}
           </p>
+          <div className="bg-green-600/10 border border-green-600/30 rounded-xl p-6 mt-8">
+            <h3 className="text-xl font-semibold text-green-600 mb-3">Our Experience in {locationName}</h3>
+            <p className="text-gray-300 leading-relaxed">
+              {location.caseReference}
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Services Section */}
-      <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
-            {isUK || isUSA ? (
-              <>Software Development Services in {locationName}</>
-            ) : (
-              <>Our Services in {locationName}</>
-            )}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 text-center">
+            Software Development Services in{" "}
+            <span className="text-green-600">{locationName}</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -190,34 +186,60 @@ const LocationPage = () => {
         </div>
       </div>
 
+      {/* FAQs Section */}
+      {location.faqs && location.faqs.length > 0 && (
+        <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-black">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 text-center">
+              Frequently Asked Questions About Our Services in{" "}
+              <span className="text-green-600">{locationName}</span>
+            </h2>
+            <div className="space-y-4">
+              {location.faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-[#1C2F27] via-[#15201A] to-[#0F1813] border border-green-600/30 rounded-xl overflow-hidden"
+                >
+                  <button
+                    onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-green-600/10 transition-colors"
+                  >
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    {openFAQ === index ? (
+                      <ChevronUp className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    )}
+                  </button>
+                  {openFAQ === index && (
+                    <div className="px-6 pb-5">
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* CTA Section */}
-      <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-black">
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-[#1C2F27] via-[#15201A] to-[#0F1813] border border-green-600/30 rounded-xl p-8 md:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            {isUK || isUSA ? (
-              <>Looking for a Software Company or Software Agency in {locationName}?</>
-            ) : (
-              <>Ready to Transform Your Digital Presence in {locationName}?</>
-            )}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Looking for a Software Company or Software Agency in{" "}
+            <span className="text-green-600">{locationName}</span>?
           </h2>
           <p className="text-lg text-gray-400 mb-8">
-            {isUK || isUSA ? (
-              <>
-                Contact Rixon, a trusted software company and software agency in {locationName}, {locationRegion}. 
-                We provide custom software development, web development, and digital solutions to help your business thrive.
-              </>
-            ) : (
-              <>
-                Contact Rixon today to discuss how we can help your business thrive in the digital landscape.
-              </>
-            )}
+            Contact Rixon, a trusted software company and software agency in {locationName}, {locationRegion}. 
+            We provide custom software development, web development, and digital solutions to help your business thrive.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-block px-8 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -225,4 +247,3 @@ const LocationPage = () => {
 };
 
 export default LocationPage;
-

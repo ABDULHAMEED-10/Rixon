@@ -25,12 +25,17 @@ const Layout = () => {
     setIsContactMenuVisible(!isContactMenuVisible);
   };
 
+  // Show CTA only on home, about, and projects pages
+  const showCTA = location.pathname === "/" || 
+                     location.pathname === "/about" || 
+                     location.pathname === "/projects";
+
   return (
     <div className="bg-black min-h-screen">
       <Navbar />
       <Outlet />
       <div className="relative bg-black">
-        <CallToAction />
+        {showCTA && <CallToAction />}
         <Footer />
       </div>
 

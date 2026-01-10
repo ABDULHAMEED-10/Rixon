@@ -93,6 +93,14 @@ const HeroSection = () => {
             <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
               We are a Top Agency serving clients globally. Our goal is to establish Rixon as a leading digital solutions agency in the UK market.
             </p>
+            <div className="mt-6">
+              <a
+                href="/locations"
+                className="text-green-600 hover:text-green-500 text-sm sm:text-base font-semibold underline transition-colors"
+              >
+                View Our UK Locations →
+              </a>
+            </div>
 
             <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row justify-center items-center ">
               <a

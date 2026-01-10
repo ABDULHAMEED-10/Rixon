@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
   <!-- Home Page -->
   <url>
     <loc>https://www.rixon.agency/</loc>
-    <lastmod>2025-01-03</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- About Page -->
   <url>
     <loc>https://www.rixon.agency/about</loc>
-    <lastmod>2025-01-03</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Contact Page -->
   <url>
     <loc>https://www.rixon.agency/contact</loc>
-    <lastmod>2025-01-03</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- Projects Page -->
   <url>
     <loc>https://www.rixon.agency/projects</loc>
-    <lastmod>2025-01-03</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- Tools Page -->
   <url>
     <loc>https://www.rixon.agency/tools</loc>
@@ -43,193 +42,201 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Location Pages -->
+
+  <!-- Locations Hub Page -->
+  <url>
+    <loc>https://www.rixon.agency/locations</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Active UK Location Pages (First 30 for phased SEO rollout) -->
   <url>
     <loc>https://www.rixon.agency/location/london-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/manchester-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/birmingham-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/liverpool-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/leeds-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/sheffield-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/bristol-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/leicester-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/coventry-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/nottingham-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/newcastle-upon-tyne-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/southampton-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/portsmouth-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/brighton-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/reading-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/northampton-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/luton-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/bolton-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/bournemouth-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/norwich-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/swindon-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/southend-on-sea-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/middlesbrough-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/peterborough-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/cambridge-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/oxford-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/ipswich-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/exeter-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/gloucester-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/york-uk</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/plymouth-uk</loc>
-    <lastmod>2026-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+  <lastmod>2026-01-05</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.rixon.agency/location/blackpool-uk</loc>
